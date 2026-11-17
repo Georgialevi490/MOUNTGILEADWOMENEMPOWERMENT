@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mt Gilead Women Empowerment | Stronger Women. Stronger Communities.</title>
+<meta name="description" content="Mt Gilead Women Empowerment is a self help group led by founder Loise Wanjiku Maina, supporting women through table banking, savings, enterprise and community care.">
+<meta property="og:title" content="Mt Gilead Women Empowerment">
+<meta property="og:description" content="A women-led self help group building savings, enterprise and community support.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="images/CHIINA FAIR WIITH OTHER MEMBERS.jpeg">
+<meta name="theme-color" content="#173F32">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Mt Gilead Women Empowerment","founder":"Loise Wanjiku Maina","telephone":"+254727459230"}</script>
+<style>
+/* ===== 1. DESIGN TOKENS (change colours here) ===== */
+:root{
+  --forest:#173F32; --green:#245844; --cream:#F7F4EC; --gold:#B89552; --white:#FFFDF8; --ink:#202820;
+  --serif:Georgia,"Iowan Old Style","Palatino Linotype",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font:17px/1.7 var(--sans);color:var(--ink);background:var(--white)}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15;color:var(--forest)}
+h2{font-size:clamp(2rem,4.5vw,3rem);margin-bottom:1rem}
+h3{font-size:1.3rem;margin-bottom:.4rem}
+p+p{margin-top:1rem}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+section{padding:clamp(4rem,9vw,7.5rem) 0}
+.cream{background:var(--cream)}
+.lead{font-size:1.15rem;max-width:62ch}
+.btn{display:inline-block;padding:.85rem 1.6rem;border:1.5px solid var(--gold);background:var(--gold);color:var(--forest);font-weight:600;text-decoration:none;border-radius:2px;cursor:pointer;font:600 1rem var(--sans);transition:background .3s var(--ease),color .3s var(--ease)}
+.btn:hover{background:transparent;color:var(--white)}
+.btn.ghost{background:transparent;color:var(--white)}
+.btn.ghost:hover{background:var(--gold);color:var(--forest)}
+.btn.dark{background:var(--forest);border-color:var(--forest);color:var(--white)}
+.btn.dark:hover{background:transparent;color:var(--forest)}
+
+/* ===== 2. HEADER / NAV ===== */
+header{position:fixed;inset:0 0 auto;z-index:50;transition:background .4s var(--ease),box-shadow .4s var(--ease)}
+header.solid{background:var(--forest);box-shadow:0 1px 0 rgba(184,149,82,.5)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{font:600 1.15rem var(--serif);color:var(--white);text-decoration:none}
+nav ul{display:flex;gap:1.6rem;list-style:none;padding:0}
+nav a{color:var(--white);text-decoration:none;font-size:.95rem;padding:.3rem 0;border-bottom:1.5px solid transparent;transition:border-color .3s}
+nav a:hover,nav a.on{border-color:var(--gold)}
+.burger{display:none;background:none;border:1.5px solid var(--gold);color:var(--white);padding:.4rem .8rem;font:inherit;cursor:pointer}
+
+/* ===== 3. HERO ===== */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;background:var(--forest);color:var(--white);padding:0}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.6s var(--ease)}
+.hero>img.in{opacity:1;animation:kb 20s ease-out forwards}@keyframes kb{from{transform:scale(1.14)}to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(23,63,50,.96) 8%,rgba(23,63,50,.55) 55%,rgba(23,63,50,.35))}
+.hero .wrap{position:relative;z-index:2;padding:9rem 0 5rem}
+.hero h1{color:var(--white);font-size:clamp(2.8rem,8vw,6rem);max-width:12ch;letter-spacing:-.01em}
+.hero p{max-width:54ch;margin:1.5rem 0 2rem;font-size:1.15rem;color:#EDE8DA}
+.hero .btns{display:flex;flex-wrap:wrap;gap:1rem}
+.rise{opacity:0;transform:translateY(22px);animation:rise 1.1s var(--ease) forwards}
+.rise:nth-child(2){animation-delay:.9s}.rise:nth-child(3){animation-delay:1.15s}
+@keyframes rise{to{opacity:1;transform:none}}
+
+/* ===== 4. SECTION LAYOUTS ===== */
+.focus{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;margin-top:3rem}
+.focus div{border-top:2px solid var(--gold);padding-top:1rem}
+.split{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.frame{position:relative}
+.frame::before{content:"";position:absolute;inset:0;border:1.5px solid var(--gold);z-index:0;transition:inset 1.1s .4s var(--ease)}.frame.in::before{inset:14px -14px -14px 14px}
+.frame img{position:relative;z-index:1;width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--green)}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem 3rem;margin-top:2.5rem}
+.three p{font-size:1rem}
+.acts{margin-top:3rem}
+.act{display:grid;grid-template-columns:200px 1fr 210px;gap:2rem;align-items:center;padding:1.6rem 0;border-top:1px solid rgba(23,63,50,.25)}
+.act:last-child{border-bottom:1px solid rgba(23,63,50,.25)}
+.quote{font:italic 1.35rem/1.55 var(--serif);color:var(--forest);border-left:3px solid var(--gold);padding-left:1.4rem;max-width:60ch;margin-top:2rem}
+.band{background:var(--forest);color:var(--white)}
+.band h2,.band h3{color:var(--white)}
+.band .lead,.band p{color:#E7E2D3}
+.note{border:1.5px dashed var(--gold);padding:1.2rem 1.4rem;font-size:.97rem;background:rgba(184,149,82,.08)}
+.band .note{background:rgba(255,253,248,.06)}
+
+/* ===== 5. GALLERY + LIGHTBOX ===== */
+.grid{columns:3 260px;column-gap:1rem;margin-top:2.5rem}
+.grid figure{break-inside:avoid;margin:0 0 1rem;background:var(--cream);cursor:zoom-in;overflow:hidden}
+.grid button{display:block;width:100%;padding:0;border:0;background:none;cursor:inherit;text-align:left}
+.grid img{width:100%;height:auto;transition:transform .8s var(--ease)}
+.grid figure:hover img{transform:scale(1.04)}
+.grid figcaption{padding:.7rem .9rem;font-size:.92rem;background:var(--white);border-bottom:2px solid var(--gold)}
+.lb{position:fixed;inset:0;background:rgba(15,32,26,.94);z-index:100;display:none;place-items:center;padding:1rem}
+.lb.open{display:grid;animation:fade .3s}
+@keyframes fade{from{opacity:0}}
+.lb figure{margin:0;max-width:min(94vw,1000px);color:var(--white);text-align:center}
+.lb img{max-height:78vh;margin:auto;object-fit:contain}
+.lb figcaption{margin-top:.8rem}
+.lb button{position:absolute;background:rgba(255,253,248,.12);color:var(--white);border:1px solid var(--gold);width:48px;height:48px;font-size:1.5rem;cursor:pointer}
+.lb .x{top:1rem;right:1rem}.lb .p{left:1rem;top:50%}.lb .n{right:1rem;top:50%}
+
+/* ===== 6. MEDIA + CONTACT ===== */
+video{width:100%;background:#0f201a;aspect-ratio:16/9;margin-top:2rem}
+.stories{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;margin-top:2.5rem}
+.contact{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(2rem,6vw,5rem)}
+.links{display:flex;flex-wrap:wrap;gap:.8rem;margin:1.5rem 0}
+form{display:grid;gap:1rem}
+label{font-weight:600;font-size:.95rem;color:var(--forest)}
+input,textarea,select{width:100%;margin-top:.3rem;padding:.8rem;border:1.5px solid #bdb59f;background:var(--white);font:inherit;color:var(--ink);border-radius:2px}
+textarea{min-height:130px;resize:vertical}
+footer{background:var(--ink);color:#d8d3c4;padding:2.5rem 0;font-size:.93rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
+
+/* ===== MOTION ===== */
+#prog{position:fixed;top:0;left:0;right:0;height:3px;background:var(--gold);transform:scaleX(0);transform-origin:left;z-index:90}
+.w{display:inline-block;opacity:0;transform:translateY(46px);animation:rise 1s var(--ease) forwards}
+.cue{position:absolute;z-index:2;left:50%;bottom:1.4rem;width:1.5px;height:50px;background:linear-gradient(var(--gold),transparent);transform-origin:top;animation:cue 2.2s var(--ease) infinite}
+@keyframes cue{0%{transform:scaleY(0)}60%{transform:scaleY(1);opacity:1}100%{transform:scaleY(1);opacity:0}}
+h2::after{content:"";display:block;width:0;height:2px;background:var(--gold);margin-top:.7rem;transition:width 1.1s .3s var(--ease)}
+.in h2::after,h2.in::after{width:70px}
+.wipe{clip-path:inset(0 0 100% 0);transform:scale(1.12);transition:clip-path 1.3s var(--ease),transform 1.8s var(--ease)}
+.in .wipe,.wipe.in{clip-path:inset(0);transform:none}
+.fi{width:100%;aspect-ratio:4/3;object-fit:cover;margin-bottom:1rem;background:var(--green)}
+.th{width:100%;height:150px;object-fit:cover;background:var(--green)}
+.focus div,.three div{transition:transform .5s var(--ease)}
+.focus div:hover,.three div:hover{transform:translateY(-6px)}
+.act{transition:background .4s,padding .4s var(--ease)}.act:hover{background:var(--cream);padding-inline:1rem}
+.btn{position:relative;overflow:hidden}.btn:active{transform:scale(.97)}
+.strip{overflow:hidden;padding:1.2rem 0;background:var(--forest)}.strip:has(.track:empty){display:none}
+.track{display:flex;width:max-content;animation:slide 70s linear infinite}.strip:hover .track{animation-play-state:paused}
+.track img{height:170px;width:auto;margin-right:1rem;object-fit:cover}
+@keyframes slide{to{transform:translateX(-50%)}}
+.grid figure{transition:transform .5s var(--ease),box-shadow .5s}.grid figure:not(.empty):hover{transform:translateY(-6px);box-shadow:0 14px 30px rgba(23,63,50,.22)}
+.grid .empty{display:grid;place-items:center;min-height:190px;border:1.5px dashed rgba(23,63,50,.3);background:transparent;cursor:default;color:#6f7468;font-size:.8rem;padding:1rem;text-align:center}
+.grid .empty:nth-child(3n){min-height:260px}.grid .empty:nth-child(4n){min-height:150px}
+@media(prefers-reduced-motion:reduce){.w,.wipe{opacity:1!important;transform:none!important;clip-path:none!important}.track{animation:none}}
+
+/* ===== 7. SCROLL REVEAL ===== */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rv.in{opacity:1;transform:none}
+
+/* ===== 8. RESPONSIVE ===== */
+@media(max-width:860px){
+  .burger{display:block}
+  nav{position:absolute;top:68px;left:0;right:0;background:var(--forest);max-height:0;overflow:hidden;transition:max-height .5s var(--ease)}
+  nav.open{max-height:420px}
+  nav ul{flex-direction:column;gap:0;padding:.5rem 1.25rem 1.2rem}
+  nav a{display:block;padding:.7rem 0}
+  header.open{background:var(--forest)}
+  .focus,.three,.split,.stories,.contact{grid-template-columns:1fr}
+  .act{grid-template-columns:1fr;gap:.4rem}
+  .frame{margin:0 14px 14px 0}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv,.rise,.hero>img{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+
+<!-- ===== HEADER ===== -->
+<header id="top">
+  <div class="wrap bar">
+    <a class="brand" href="#home">Mt Gilead Women Empowerment</a>
+    <button class="burger" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav id="menu" aria-label="Main">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#activities">Our Activities</a></li>
+        <li><a href="#projects">Projects and Impact</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#media">Media and Stories</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ===== HOME ===== -->
+<section class="hero" id="home">
+  <!-- HERO PHOTO: change the file name below to use another picture -->
+  <img src="images/CHIINAFAIR WIITH OTHER MEMBERS.jpeg" alt="Members of Mt Gilead Women Empowerment with other delegates during a trip to China" onload="this.classList.add('in')">
+  <span class="cue" aria-hidden="true"></span>
+  <div class="wrap">
+    <h1 id="hl">Stronger Women. Stronger Communities.</h1>
+    <p class="rise">Mt Gilead Women Empowerment is a self help group where women save together, lend to one another, start enterprises and look after those who need support most.</p>
+    <div class="btns rise">
+      <a class="btn" href="#contact">Get in touch</a>
+      <a class="btn ghost" href="#activities">See what we do</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap rv">
+    <h2>What the group is built on</h2>
+    <p class="lead">Our members pool their strength, their savings and their skills. The work is simple and practical, and it starts with women trusting each other.</p>
+    <div class="focus">
+      <div><img class="wipe fi" src="images/attemdig  a project orientation meeeting.jpeg" alt="Members at a group meeting" onerror="this.remove()"><h3>Saving and lending</h3><p>Regular contributions and table banking give members access to money they can use for school fees, stock and emergencies.</p></div>
+      <div><img class="wipe fi" src="images/presenting at fair.jpeg" alt="Presenting at a fair" onerror="this.remove()"><h3>Enterprise</h3><p>Members are encouraged to start and grow small businesses, and to learn from other markets, including trade fairs abroad.</p></div>
+      <div><img class="wipe fi" src="images/visting an elderly member.jpeg" alt="Visiting an elderly member" onerror="this.remove()"><h3>Care for others</h3><p>The group visits and supports elderly members and vulnerable women in the community.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="cream" id="about">
+  <div class="wrap split">
+    <div class="frame rv">
+      <img src="images/loise wanjiru mwangi founder.jpeg" alt="Loise Wanjiku Maina, founder of Mt Gilead Women Empowerment" onerror="this.removeAttribute('src')">
+    </div>
+    <div class="rv">
+      <h2>About Mt Gilead Women Empowerment</h2>
+      <p>Mt Gilead Women Empowerment is a self help group founded and led by Loise Wanjiku Maina. Women come together to build financial discipline, support one another through hard seasons and open doors to new opportunities.</p>
+      <p>Our meetings are warm, practical and open. Every member has a voice, every contribution is recorded, and every decision is made together.</p>
+      <div class="quote">“When women stand together, no home and no dream is too small to be lifted.”</div>
+      <p style="margin-top:1rem"><strong>Loise Wanjiku Maina</strong>, Founder</p>
+    </div>
+  </div>
+  <div class="wrap three rv">
+    <div><h3>Mission</h3><p>To help women grow their savings, income and confidence through group effort, training and mutual support.</p></div>
+    <div><h3>Vision</h3><p>Families and communities where women are financially secure, respected and able to lead.</p></div>
+    <div><h3>Values</h3><p>Honesty, accountability, dignity, service to others and working together.</p></div>
+    <div><h3>Objectives</h3><p>Encourage regular saving. Make small loans available through table banking. Support women starting businesses. Train members in practical skills.</p></div>
+    <div><h3>Leadership</h3><p>The group is guided by its founder and an elected team of members. Members take part in decisions and responsibilities are shared.</p></div>
+    <div><h3>Membership</h3><p>Open to women who share the group’s values and are ready to contribute. New members are welcomed through a conversation with the group.</p></div>
+  </div>
+</section>
+
+<div class="strip" aria-hidden="true"><div class="track" id="track"></div></div>
+
+<!-- ===== ACTIVITIES ===== -->
+<section id="activities">
+  <div class="wrap">
+    <h2 class="rv">Our activities</h2>
+    <p class="lead rv">Six strands of work run side by side. Each one supports the others.</p>
+    <div class="acts">
+      <div class="act rv"><h3>Table banking</h3><p>Members meet, contribute to a common fund and take turns borrowing from it at agreed terms. The loans are small, the repayments are public within the group, and the interest stays with the members.</p><img class="wipe th" src="images/attendeing meeting at jw marriot nairobi.jpeg" alt="At a meeting" onerror="this.remove()"></div>
+      <div class="act rv"><h3>Savings</h3><p>Regular savings build a cushion for each woman and a base of trust for the whole group. Savings habits learned here carry over into households.</p><img class="wipe th" src="images/donnor extra imgae.jpeg" alt="Members and supporters" onerror="this.remove()"></div>
+      <div class="act rv"><h3>Charity and community support</h3><p>When a member or neighbour is in need, the group responds with visits, food, prayer and practical help, including time spent with elderly members at home.</p><img class="wipe th" src="images/donor.jpeg" alt="Supporting the community" onerror="this.remove()"></div>
+      <div class="act rv"><h3>Entrepreneurship</h3><p>Women are helped to turn small ideas into steady businesses, through advice from peers, access to table banking funds and exposure to markets beyond the village, including trade fairs.</p><img class="wipe th" src="images/attending china import  and export fair.jpeg" alt="At the China Import and Export Fair" onerror="this.remove()"></div>
+      <div class="act rv"><h3>Training and skills development</h3><p>Orientation meetings and workshops cover money management, business basics and new skills. Topics include saving, record keeping and starting a business.</p><img class="wipe th" src="images/project orientation meeting.jpeg" alt="Project orientation meeting" onerror="this.remove()"></div>
+      <div class="act rv"><h3>Supporting vulnerable women</h3><p>Widows, elderly women and women facing hardship are not left on their own. The group looks for ways to walk with them, from encouragement to practical assistance.</p><img class="wipe th" src="images/visting an elderly member.jpeg" alt="Visiting an elderly member" onerror="this.remove()"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section class="band" id="projects">
+  <div class="wrap">
+    <h2 class="rv">Projects and community impact</h2>
+    <p class="lead rv">We describe our work as it is, without inflated numbers. As projects are documented, they will be added here.</p>
+    <div class="three rv">
+      <div><img class="wipe fi" src="images/project orientation meeting.jpeg" alt="Project orientation meeting" onerror="this.remove()"><h3>Community initiatives</h3><p>Visits to elderly members, support to families in need and project orientation meetings that prepare members for new work.</p></div>
+      <div><img class="wipe fi" src="images/donor 2.jpeg" alt="Members with supporters" onerror="this.remove()"><h3>Women’s economic development</h3><p>Savings and table banking give women a financial footing, so that one setback does not undo a household.</p></div>
+      <div><img class="wipe fi" src="images/china meeting.jpeg" alt="A meeting in China" onerror="this.remove()"><h3>Enterprise development</h3><p>Members have attended business and trade events in Nairobi and in China to study products, meet suppliers and learn how larger markets work.</p></div>
+    </div>
+    <h2 class="rv" style="margin-top:4rem;font-size:1.8rem">Success stories</h2>
+    <p class="rv">Every story in this group begins the same way. A woman comes to her first meeting, makes her first contribution and finds she is not alone. From there a small loan becomes stock, stock becomes a stall, and a stall becomes a steady income. Individual member stories will be shared here in their own words.</p>
+    <h2 class="rv" style="margin-top:3rem;font-size:1.8rem">Partner with us</h2>
+    <p class="rv">We welcome conversations with donors, training organisations, financial institutions and businesses that want to support women’s enterprise. Reach out through the contact section to discuss how we can work together.</p>
+    <p class="rv"><a class="btn" href="#contact">Start a conversation</a></p>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section id="gallery">
+  <div class="wrap">
+    <h2 class="rv">Gallery</h2>
+    <p class="lead rv">Moments from our meetings, visits and journeys. Select any photograph to view it larger.</p>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<!-- ===== INTERNATIONAL EXPOSURE ===== -->
+<section class="cream">
+  <div class="wrap split">
+    <div class="rv">
+      <h2>International exposure</h2>
+      <p>Members of the group have represented Mt Gilead Women Empowerment at the China Import and Export Fair in Guangzhou, meeting exhibitors and learning how products are made and sold at scale.</p>
+      <p>The group’s journey has also included gatherings at JW Marriott Nairobi, where members attended meetings and spoke before an audience.</p>
+    </div>
+    <div class="frame rv"><img src="images/at canton fair.jpeg" alt="A member speaking at the Canton Fair podium" onerror="this.removeAttribute('src')"></div>
+  </div>
+</section>
+
+<!-- ===== MEDIA ===== -->
+<section id="media">
+  <div class="wrap">
+    <h2 class="rv">Media and stories</h2>
+    <p class="lead rv">Watch the group in its own words. Updates and stories will be posted below.</p>
+    <!-- VIDEO: save your MP4 as videos/story.mp4 (or change the file name below) -->
+    <video controls preload="metadata" class="rv">
+      <source src="videos/story.mp4" type="video/mp4">
+      Your browser cannot play this video. Add an MP4 file named story.mp4 to the videos folder.
+    </video>
+    <div class="stories">
+      <article class="rv"><img class="wipe fi" src="images/giving speech at jw marriot.jpeg" alt="Giving a speech at JW Marriott Nairobi" onerror="this.remove()"><h3>Latest update</h3><p>Members continue to meet, save and plan together. Photographs from recent events are in the gallery above.</p></article>
+      <article class="rv"><img class="wipe fi" src="images/ANOTHER FAIR.jpeg" alt="Members at a fair" onerror="this.remove()"><h3>Member stories</h3><p>Stories of progress, big and small, will be shared here as members tell them.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="cream" id="contact">
+  <div class="wrap contact">
+    <div class="rv">
+      <h2>Contact us</h2>
+      <p class="lead">Speak to our founder directly, or send a message and we will respond.</p>
+      <p style="margin-top:1.5rem"><strong>Loise Wanjiku Maina</strong><br>Founder<br>0727 459 230</p>
+      <div class="links">
+        <a class="btn dark" href="tel:+254727459230">Call now</a>
+        <a class="btn" href="https://wa.me/254727459230?text=Hello%20Mt%20Gilead%20Women%20Empowerment" target="_blank" rel="noopener">Chat on WhatsApp</a>
+      </div>
+      <h3>Location</h3>
+      <p>Meetings are held by arrangement. Call or message the founder on WhatsApp for directions and the date of the next meeting.</p>
+    </div>
+    <form class="rv" id="enq">
+      <label>Your name<input name="name" required autocomplete="name"></label>
+      <label>Phone or email<input name="contact" required></label>
+      <label>Reason for writing
+        <select name="topic"><option>General enquiry</option><option>Joining the group</option><option>Partnership</option><option>Donation or support</option><option>Media</option></select>
+      </label>
+      <label>Message<textarea name="msg" required></textarea></label>
+      <button class="btn dark" type="submit">Send via WhatsApp</button>
+      <p style="font-size:.9rem">This opens WhatsApp with your message ready to send to the group.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr"></span> Mt Gilead Women Empowerment. Self help group.</span>
+    <span>Founder: Loise Wanjiku Maina · 0727 459 230</span>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photograph viewer">
+  <button class="x" aria-label="Close">×</button><button class="p" aria-label="Previous">‹</button><button class="n" aria-label="Next">›</button>
+  <figure><img alt=""><figcaption></figcaption></figure>
+</div>
+
+<script>
+/* ===== GALLERY LIST =====
+   To add a photo: put it in the images folder, then add one line below.
+   f = file name, c = caption, a = short description for screen readers. */
+const PHOTOS=[
+ {f:'CHIINA_FAIR_WIITH_OTHER_MEMBERS.jpeg',c:'With other members at the China fair'},
+ {f:'ANOTHER_FAIR.jpeg',c:'Another fair visit'},
+ {f:'attending_china_import__and_export_fair.jpeg',c:'Attending the China Import and Export Fair'},
+ {f:'at_canton_fair.jpeg',c:'At the Canton Fair'},
+ {f:'presenting_at_fair.jpeg',c:'Presenting at the fair'},
+ {f:'china_meeting.jpeg',c:'China meeting'},
+ {f:'at_rezen_place_after_fair.jpeg',c:'At Rezen after the fair'},
+ {f:'TRAVELLING_TO_TANZANIA.jpeg',c:'Travelling to Tanzania'},
+ {f:'visting_an_elderly_member.jpeg',c:'Visiting an elderly member'},
+ {f:'project_orientation_meeting.jpeg',c:'Project orientation meeting'},
+ {f:'attemdig__a_project_orientation_meeeting.jpeg',c:'Attending a project orientation meeting'},
+ {f:'attendeing_meeting_at_jw_marriot_nairobi.jpeg',c:'Attending a meeting at JW Marriott Nairobi'},
+ {f:'giving_speech_at_jw_marriot.jpeg',c:'Giving a speech at JW Marriott Nairobi'},
+ {f:'jw_marriot_place.jpeg',c:'JW Marriott Nairobi'},
+ {f:'pic_with_meber_attending_jw_marrriot_meet_up.jpeg',c:'With a member at the JW Marriott meet-up'},
+ {f:'donor.jpeg',c:'Donor engagement'},
+ {f:'donor_2.jpeg',c:'Donor engagement'},
+ {f:'donnor_extra_imgae.jpeg',c:'Donor engagement'}
+];
+for(let i=1;i<=22;i++)PHOTOS.push({f:'gallery-'+i+'.jpeg',c:'Mt Gilead Women Empowerment'}); /* 22 extra slots: save photos as gallery-1.jpeg, gallery-2.jpeg ... */
+const $=s=>document.querySelector(s), grid=$('#grid'), lb=$('#lb'), lbImg=lb.querySelector('img'), lbCap=lb.querySelector('figcaption');
+let shown=[],cur=0;
+PHOTOS.forEach(p=>{
+  const fig=document.createElement('figure'); fig.className='rv';
+  fig.innerHTML='<button type="button"><img loading="lazy" decoding="async"><figcaption></figcaption></button>';
+  const im=fig.querySelector('img'); im.alt=p.c; im.src='images/'+p.f;
+  fig.querySelector('figcaption').textContent=p.c;
+  im.onerror=()=>{fig.className='rv empty in';fig.innerHTML='<span>images/'+p.f+'</span>';fig.onclick=null};
+  fig.onclick=()=>open(p,fig);
+  grid.appendChild(fig);
+});
+function list(){return [...grid.querySelectorAll('figure:not(.empty)')]}
+function open(p,fig){shown=list();cur=shown.indexOf(fig);show();lb.classList.add('open');document.body.style.overflow='hidden';lb.querySelector('.x').focus()}
+function show(){const im=shown[cur].querySelector('img');lbImg.src=im.src;lbImg.alt=im.alt;lbCap.textContent=im.alt}
+function step(d){cur=(cur+d+shown.length)%shown.length;show()}
+function close(){lb.classList.remove('open');document.body.style.overflow=''}
+lb.querySelector('.x').onclick=close;lb.querySelector('.p').onclick=()=>step(-1);lb.querySelector('.n').onclick=()=>step(1);
+lb.onclick=e=>{if(e.target===lb)close()};
+addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')step(-1);if(e.key==='ArrowRight')step(1)});
+
+/* Header colour, mobile menu, active link */
+const hd=$('header'),menu=$('#menu'),bg=$('.burger');
+const sc=()=>hd.classList.toggle('solid',scrollY>60);sc();addEventListener('scroll',sc,{passive:true});
+bg.onclick=()=>{const o=menu.classList.toggle('open');hd.classList.toggle('open',o);bg.setAttribute('aria-expanded',o)};
+menu.querySelectorAll('a').forEach(a=>a.onclick=()=>{menu.classList.remove('open');hd.classList.remove('open');bg.setAttribute('aria-expanded',false)});
+const links=[...menu.querySelectorAll('a')];
+const spy=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(l=>l.classList.toggle('on',l.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-45% 0px -50% 0px'});
+document.querySelectorAll('section[id]').forEach(s=>spy.observe(s));
+
+/* Motion: headline words, parallax, progress bar, photo strip, staggered reveals */
+const hl=$('#hl');hl.innerHTML=hl.textContent.split(' ').map((w,i)=>`<span class="w" style="animation-delay:${.15+i*.14}s">${w}</span>`).join(' ');
+const pr=$('#prog'),hi=$('.hero>img');
+addEventListener('scroll',()=>{pr.style.transform='scaleX('+scrollY/(document.documentElement.scrollHeight-innerHeight)+')';if(scrollY<innerHeight)hi.style.translate='0 '+scrollY*.25+'px'},{passive:true});
+const ph=PHOTOS.slice(0,14).map(p=>p.f);
+$('#track').innerHTML=[...ph,...ph].map(f=>`<img src="images/${f}" alt="" onerror="this.remove()">`).join('');
+document.querySelectorAll('.focus,.three,.acts,.stories').forEach(g=>[...g.children].forEach((c,i)=>{c.classList.add('rv');c.style.transitionDelay=(i%3)*.14+'s'}));
+document.querySelectorAll('.frame img').forEach(i=>i.classList.add('wipe'));
+
+/* Scroll reveal */
+const rv=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');rv.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>rv.observe(el));
+new MutationObserver(()=>document.querySelectorAll('.rv:not(.in)').forEach(el=>rv.observe(el))).observe(grid,{childList:true});
+
+/* Enquiry form opens WhatsApp with the message filled in */
+$('#enq').onsubmit=e=>{e.preventDefault();const f=new FormData(e.target);
+  const t=`Hello Mt Gilead Women Empowerment.\nName: ${f.get('name')}\nContact: ${f.get('contact')}\nTopic: ${f.get('topic')}\n\n${f.get('msg')}`;
+  window.open('https://wa.me/254727459230?text='+encodeURIComponent(t),'_blank')};
+$('#yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
